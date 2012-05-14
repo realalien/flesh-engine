@@ -2,6 +2,42 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
+# newsly added gems 
+gem 'mongoid',  '2.4.10'
+gem 'bson_ext', '~> 1.2'
+gem 'devise'
+gem 'cancan'
+gem 'jquery-rails'
+gem 'passenger'
+gem 'capistrano'
+gem "compass", ">= 0.12.1"
+gem 'haml'
+group :development, :test do
+  gem 'capybara'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'factory_girl_rails'
+  gem 'autotest'
+  gem 'launchy'
+  gem 'faker'
+
+  # Resolve the rcov dependencies, REF. https://github.com/iain/metrical/issues/12  
+  gem "jeweler", ">= 1.6.4"
+  gem "rcov", ">= 0", :platforms => :ruby_18
+  gem "simplecov", ">= 0", :platforms => :ruby_19, :require => "false"
+
+  gem 'ruby-debug19'
+  gem 'haml-rails'
+
+  gem 'metrical'
+  #gem 'metric_fu'
+end
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
