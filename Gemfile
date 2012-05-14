@@ -15,7 +15,7 @@ gem 'haml'
 group :development, :test do
   gem 'capybara'
   gem 'cucumber'
-  gem 'cucumber-rails'
+  # gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'rspec'
   gem 'rspec-rails'
@@ -24,17 +24,16 @@ group :development, :test do
   gem 'autotest'
   gem 'launchy'
   gem 'faker'
-
-  # Resolve the rcov dependencies, REF. https://github.com/iain/metrical/issues/12  
-  gem "jeweler", ">= 1.6.4"
-  gem "rcov", ">= 0", :platforms => :ruby_18
-  gem "simplecov", ">= 0", :platforms => :ruby_19, :require => "false"
-
   gem 'ruby-debug19'
   gem 'haml-rails'
 
+  # Resolve the rcov dependencies, REF. https://github.com/iain/metrical/issues/12  
   gem 'metrical'
   #gem 'metric_fu'
+end
+
+group :test do
+  gem 'cucumber-rails'
 end
 
 
