@@ -30,6 +30,9 @@ group :development, :test do
   # Resolve the rcov dependencies, REF. https://github.com/iain/metrical/issues/12  
   gem 'metrical'
   #gem 'metric_fu'
+
+  # Resolve 
+  gem 'test-unit'
 end
 
 group :test do

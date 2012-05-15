@@ -274,6 +274,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     syntax (1.0.0)
+    test-unit (2.4.8)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -318,4 +319,5 @@ DEPENDENCIES
   ruby-debug19
   sass-rails (~> 3.2.3)
   shoulda
+  test-unit
   uglifier (>= 1.0.3)
