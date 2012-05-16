@@ -10,7 +10,7 @@ gem 'cancan'
 gem 'jquery-rails'
 gem 'passenger'
 gem 'capistrano'
-gem "compass", ">= 0.12.1"
+#gem "compass", ">= 0.12.1"
 gem 'haml'
 group :development, :test do
   gem 'capybara'
@@ -39,7 +39,6 @@ group :test do
   gem 'cucumber-rails'
 end
 
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -55,6 +54,10 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  # Not sure if we will use compass and related gems
+  #gem 'compass'
+  #gem 'compass-rails' 
 end
 
 
