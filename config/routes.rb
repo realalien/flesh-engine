@@ -5,10 +5,13 @@ FleshEngine::Application.routes.draw do
 
   get "home/index"
 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   devise_for :users
+
+  match '/auth/weibo/callback', to: 'application#feedback' # 'sessions#create'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

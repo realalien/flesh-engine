@@ -12,6 +12,12 @@ gem 'passenger'
 gem 'capistrano'
 #gem "compass", ">= 0.12.1"
 gem 'haml'
+
+# integrate weibo
+gem 'oa-oauth'
+gem 'omniauth'
+gem 'omniauth-weibo-oauth2'
+
 group :development, :test do
   gem 'capybara'
   gem 'cucumber'

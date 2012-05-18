@@ -66,5 +66,9 @@ module FleshEngine
     # If you are deploying Rails 3.1 on Heroku, you may want to set:
 	#config.assets.initialize_on_precompile = false
 
+	# follow tutorial:  http://www.haojii.com/2011/09/rails-oauth-with-sina-weibo-tutorial/
+	require 'oa-oauth'
+    config.middleware.use OmniAuth::Strategies::Tsina, '3422703718', '56b821f7588cf3987878b7d5beed1c32'
+
   end
 end
