@@ -1,0 +1,23 @@
+%h1 Listing account_pois
+
+%table
+  %tr
+    %th Account Id 
+    %th Name
+    %th SNS website
+    %th
+    %th
+    %th
+
+  - @account_pois.each do |account_poi|
+    %tr
+      %td= account_poi.account_id
+      %td= account_poi.name
+      %td= account_poi.sns_name
+      %td= link_to 'Show', account_poi
+      %td= link_to 'Edit', edit_account_poi_path(account_poi)
+      %td= link_to 'Destroy', account_poi, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Account poi', new_account_poi_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Account Id:
+  = @account_poi.account_id
+%p
+  %b Name:
+  = @account_poi.name
+
+= link_to 'Edit', edit_account_poi_path(@account_poi)
+\|
+= link_to 'Back', account_pois_path

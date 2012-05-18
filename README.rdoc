@@ -2,6 +2,22 @@ It's a try-out project for tutorial 'rails-3-rspec-cucumber-jquery-devise-mongoi
 REF. http://jimdrannbauer.com/2011/01/29/rails-3-rspec-cucumber-jquery-devise-mongoid-and-compass/
 
 
+== Targets ==
+* Domonstrate dynamic attributs processing
+* Serve as the back-end for browser-based data processing tools
+
+
+	> Q: how to convert existing model using MongoMapper to Mongoid? A:
+	> Q: Why I can't delete the record in show page? And the httpary api call return no content? A:
+	> EXTRA: create related tools as document for different dimension data analysing!
+	> TODO: test run the rubyplayground/hackingLBS to create records as example
+	> TODO: use httpparty and faraday to allow reusing existing CLI ruby script of data crawling.
+	> DONE: make mongoid-based rails working!
+* Data visualization and manipulation via javascript
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
