@@ -15,8 +15,9 @@ gem 'haml'
 
 # integrate weibo
 gem 'omniauth' #, '>= 0.2.6'
-gem 'oa-oauth', '~> 0.2.2'
-gem 'omniauth_china', '~> 0.1.1'
+#gem 'oa-oauth' # , '~> 0.2.2'
+gem 'oa-oauth' , '>= 0.3.2'
+#gem 'omniauth_china', '~> 0.1.1'
 #gem 'omniauth-weibo-oauth2'
 
 group :development, :test do
