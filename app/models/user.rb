@@ -5,6 +5,8 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  devise :omniauthable
+
   ## Database authenticatable
   field :email,              :type => String, :null => false, :default => ""
   field :encrypted_password, :type => String, :null => false, :default => ""
@@ -39,4 +41,16 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+
+  def self.find_for_weibo_oauth(access_token, signed_in_resource=nil)
+    data = access_token.extra.raw_info
+	puts data.email
+    if user = self.find_by_email(data.email)
+      user
+    else # Create a user with a stub password. 
+      puts "going to create a user"
+      self.create(:email => data.email, :password => Devise.friendly_token[0,20]) 
+    end
+  end
+
 end

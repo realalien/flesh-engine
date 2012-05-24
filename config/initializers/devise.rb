@@ -220,4 +220,8 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+
+  require 'omniauth-weibo-oauth2'
+  config.omniauth  :weibo, "3422703718", "56b821f7588cf3987878b7d5beed1c32"
+
 end

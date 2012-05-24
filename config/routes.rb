@@ -10,8 +10,16 @@ FleshEngine::Application.routes.draw do
   # first created -> highest priority.
 
   devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  match '/auth/weibo/callback', to: 'application#feedback' # 'sessions#create'
+  #match '/auth/weibo/callback' => 'home/feedback'
+
+  devise_scope :users do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+  #match '/auth/:provider/callback' => 'application#feedback' # 'sessions#create'
+  #match "/users/sign_out" => "sessions#destroy", :as => :signout
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

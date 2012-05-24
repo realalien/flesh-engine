@@ -14,11 +14,18 @@ gem 'capistrano'
 gem 'haml'
 
 # integrate weibo
-gem 'omniauth' #, '>= 0.2.6'
+#gem 'omniauth' , '~>0.2.6' #, '>= 0.2.6'
 #gem 'oa-oauth' # , '~> 0.2.2'
-gem 'oa-oauth' , '>= 0.3.2'
-#gem 'omniauth_china', '~> 0.1.1'
+#gem 'oa-oauth' # , '~' #'>= 0.3.2'
+#gem 'omniauth_china', '~>0.0.3' #~> 0.1.1'
 #gem 'omniauth-weibo-oauth2'
+
+gem 'omniauth'
+#gem 'oa-oauth' #, '~>0.3.2'
+#gem 'omniauth-twitter',  :git => 'https://github.com/arunagw/omniauth-twitter.git'
+#gem 'omniauth-weibo', :git => 'https://github.com/ballantyne/omniauth-weibo.git'
+gem 'omniauth-weibo-oauth2', :git => 'https://github.com/beenhero/omniauth-weibo-oauth2.git'
+
 
 group :development, :test do
   gem 'capybara'
