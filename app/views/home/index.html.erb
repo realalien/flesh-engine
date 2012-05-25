@@ -11,5 +11,6 @@
       <%= link_to '注册', new_user_registration_path %> |
       <%= link_to '登录', new_user_session_path %> |
 	  <%= link_to '微博登陆', user_omniauth_authorize_path(:weibo)  %>
+      <%= link_to '回调地址' , user_omniauth_callback_path(:weibo) %>
     </div>
     <% end -%>
