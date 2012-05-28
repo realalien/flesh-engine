@@ -5,7 +5,7 @@ gem 'rails', '3.2.3'
 # newsly added gems 
 gem 'mongoid',  '2.4.10'
 gem 'bson_ext', '~> 1.2'
-gem 'devise'
+gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem 'cancan'
 gem 'jquery-rails'
 gem 'passenger'

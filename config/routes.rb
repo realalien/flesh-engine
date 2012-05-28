@@ -1,4 +1,6 @@
 FleshEngine::Application.routes.draw do
+  resources :authentications
+
   resources :account_pois
 
   get "vip/index"
@@ -9,10 +11,11 @@ FleshEngine::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  devise_for :users
+  #devise_for :users
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   #match '/auth/weibo/callback' => 'home/feedback'
+  #match '/auth/:provider/callback' => 'authentications#create'
 
   devise_scope :users do
     get '/users/sign_out' => 'devise/sessions#destroy'

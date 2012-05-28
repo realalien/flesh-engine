@@ -222,6 +222,6 @@ Devise.setup do |config|
   # end
 
   require 'omniauth-weibo-oauth2'
-  config.omniauth  :weibo, "3422703718", "56d5601999968f782ee5ac8517b302e8"
+  config.omniauth  :weibo, "3422703718", "56d5601999968f782ee5ac8517b302e8",  :client_options => {:authorize_path => '/oauth/authenticate'}
   #config.omniauth  :weibo, "3302456831", "f0eeea9c0bae35ce0dc45136d561afb9" # 站内应用
 end

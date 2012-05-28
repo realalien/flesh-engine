@@ -1,8 +1,11 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def weibo 
+    render :text => env["omniauth.auth"]
+=begin      
     # You need to implement the method below in your model
     @user = User.find_for_weibo_oauth(request.env["omniauth.auth"], current_user)
 
+    puts  "----------------omniauth.auth ------------------"  
     puts  request.env["omniauth.auth"]    
 
     if @user.persisted?
@@ -14,5 +17,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session["devise.weibo_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
+=end
   end
 end

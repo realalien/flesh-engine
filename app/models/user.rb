@@ -7,6 +7,8 @@ class User
 
   devise :omniauthable
 
+  references_many :authentications, :dependent => :delete
+
   ## Database authenticatable
   field :email,              :type => String, :null => false, :default => ""
   field :encrypted_password, :type => String, :null => false, :default => ""
