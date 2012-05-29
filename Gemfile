@@ -26,7 +26,18 @@ gem 'omniauth'
 #gem 'omniauth-weibo', :git => 'https://github.com/ballantyne/omniauth-weibo.git'
 gem 'omniauth-weibo-oauth2', :git => 'https://github.com/beenhero/omniauth-weibo-oauth2.git'
 
+gem "grizzly-weibo",'~> 0.3.6' , :require => "grizzly"
+#Deprecated: gem "faraday_stack", :git => "https://github.com/mislav/faraday-stack.git"
+gem "faraday_middleware", :git => "https://github.com/pengwynn/faraday_middleware.git"
 
+
+# ---- Experimental ----
+# For interactivity
+gem "google_visualr", ">= 2.1"
+# consider writing a ruby wrapper for Cocos2D javascript
+
+
+# ----------------------
 group :development, :test do
   gem 'capybara'
   gem 'cucumber'

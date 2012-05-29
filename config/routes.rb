@@ -7,7 +7,6 @@ FleshEngine::Application.routes.draw do
 
   get "home/index"
 
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -23,6 +22,7 @@ FleshEngine::Application.routes.draw do
   #match '/auth/:provider/callback' => 'application#feedback' # 'sessions#create'
   #match "/users/sign_out" => "sessions#destroy", :as => :signout
 
+  match 'human_sniffer/:action' => "human_sniffer#:action"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

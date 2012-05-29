@@ -1,0 +1,2 @@
+module HumanSnifferHelper
+end
