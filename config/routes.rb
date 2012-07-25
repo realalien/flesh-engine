@@ -1,4 +1,8 @@
 FleshEngine::Application.routes.draw do
+  get "news_tagger/browse"
+
+  get "news_tagger/tag"
+
   resources :authentications
 
   resources :account_pois
@@ -16,7 +20,7 @@ FleshEngine::Application.routes.draw do
   #match '/auth/weibo/callback' => 'home/feedback'
   #match '/auth/:provider/callback' => 'authentications#create'
 
-  devise_scope :users do
+  devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   #match '/auth/:provider/callback' => 'application#feedback' # 'sessions#create'

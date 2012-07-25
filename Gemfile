@@ -4,7 +4,8 @@ gem 'rails', '3.2.3'
 
 # newsly added gems 
 gem 'mongoid',  '2.4.10'
-gem 'bson_ext', '~> 1.2'
+gem 'bson', '=1.6.2'
+gem 'bson_ext', '=1.6.2' # http://goo.gl/d3XDe
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 gem 'cancan'
 gem 'jquery-rails'
@@ -33,7 +34,7 @@ gem "faraday_middleware", :git => "https://github.com/pengwynn/faraday_middlewar
 
 # ---- Experimental ----
 # For interactivity
-gem "google_visualr", ">= 2.1"
+#gem "google_visualr", ">= 2.1"
 # consider writing a ruby wrapper for Cocos2D javascript
 
 

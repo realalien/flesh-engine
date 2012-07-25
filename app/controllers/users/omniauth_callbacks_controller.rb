@@ -5,8 +5,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     raise "Unknown Provider Method: #{method}" unless method.to_s.downcase =~ /weibo/  #(open_id|facebook)
     
     omniauth = request.env['omniauth.auth']
-    #puts omniauth
-    session["devise.weibo_data"] = request.env["omniauth.auth"]  
+    # TODO: logging not necessary!
+    puts omniauth
+    #session["devise.weibo_data"] = request.env["omniauth.auth"]  
     @user = User.includes(:authentications).merge(Authentication.where(:provider => omniauth['provider'], :uid => omniauth['uid'])).first
     
     if @user
@@ -24,8 +25,18 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user.password = (15..25).collect{(45..126).to_a[Kernel.rand(81)].chr}.join
       
       # add users email from the returned authentication hash
-      @user.email = omniauth['user_info']['email']
-      
+	  # TODO: potential bugs, some services don't provide the email
+	  # REF: https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema
+	  if omniauth["info"].is_a? Hash  and not omniauth["info"]["email"].nil? and not omniauth["info"]["email"].empty?  
+		 puts "-------------> find user email auth #{omniauth["info"]["email"]}  "
+         @user.email = omniauth["info"]["email"]
+      else
+		 puts "-------------> not find user email in auth" 
+		 # NOTE: probably we need to ask user for his/her email to at lease  
+		 # TODO: same email to temporary use
+		 @user.email = "placeholder@notexist.com"
+	  end
+ 
       @user.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
       @user.save!
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Weibo"  
