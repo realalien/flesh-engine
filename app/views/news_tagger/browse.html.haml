@@ -1,2 +1,16 @@
 %h1 NewsTagger#browse
 %p Find me in app/views/news_tagger/browse.html.haml
+
+
+%p== #{@news.count} collected!
+
+<table border=1">
+
+
+%table{:border => 1}
+  %tbody
+    -@news.each do |n|
+      %tr
+        %td= link_to n.title, n.link, {:target=>"_blank"}
+        %td= n.news_agent_name
+        %td= link_to "Edit Tagging" ,:controller =>:news_tagger_controller, :action => :tag, :id=>n.id
