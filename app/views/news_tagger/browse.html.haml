@@ -4,7 +4,6 @@
 
 %p== #{@news.count} collected!
 
-<table border=1">
 
 
 %table{:border => 1}
@@ -13,4 +12,4 @@
       %tr
         %td= link_to n.title, n.link, {:target=>"_blank"}
         %td= n.news_agent_name
-        %td= link_to "Edit Tagging" ,:controller =>:news_tagger_controller, :action => :tag, :id=>n.id
+        %td= link_to "Edit Tagging" ,:controller =>:news_tagger, :action => :tagging, :id=>n.id

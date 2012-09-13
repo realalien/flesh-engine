@@ -2,6 +2,8 @@ class NewsArticle
     include Mongoid::Document 
     include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
+	include Mongoid::Taggable   # for tagging
+
     set_database :secondary
     
     field :title, type: String  # 标题

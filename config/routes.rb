@@ -1,7 +1,7 @@
 FleshEngine::Application.routes.draw do
   get "news_tagger/browse"
 
-  get "news_tagger/tag"
+  get "news_tagger/tagging"
 
   resources :authentications
 

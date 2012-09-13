@@ -38,6 +38,8 @@ gem "faraday_middleware", :git => "https://github.com/pengwynn/faraday_middlewar
 # consider writing a ruby wrapper for Cocos2D javascript
 
 
+gem 'mongoid_taggable'
+
 # ----------------------
 group :development, :test do
   gem 'capybara'
